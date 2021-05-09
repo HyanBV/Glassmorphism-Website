@@ -875,3 +875,29 @@ button {
 }
 
 /* Responsiveness */
+@media(max-width: 991px) {
+    .container {
+        padding: 0;
+    }
+
+    .home-text,
+    .home.img {
+        width: 100%;
+    }
+
+    .home-text {
+        text-align: center;
+    }
+
+    .home-img {
+        order: -1;
+    }
+
+    .home-img .img-box {
+        max-width: 300px;
+    }
+
+    .home-text .btn {
+        margin: 07px 15px;
+    }
+}
