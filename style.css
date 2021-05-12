@@ -1042,7 +1042,7 @@ button {
     }
 
     .home-text,
-    .home.img {
+    .home-img {
         width: 100%;
     }
 
@@ -1113,5 +1113,11 @@ button {
 
     .pp-header h3 {
         font-size: 20px;
+    }
+}
+
+@media(max-width: 424px) {
+    .style-switcher {
+        padding-right: 25px;
     }
 }
