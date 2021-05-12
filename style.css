@@ -3,7 +3,6 @@
 
 /* Variables */
 :root {
-    --main: #e02f6b;
     --blue: darkblue; /* #0000ff */
     --blue-dark: #18293c;
     --orange: #ffa500;
@@ -932,6 +931,108 @@ button {
 .contact-info-item .social-links a:hover {
     color: var(--white);
     background-color: var(--main);
+}
+
+/* Style Switcher */
+.style-switcher {
+    padding: 5px;
+    margin-top: -5px;
+    transform: translateX(75%);
+    transition: all 0.3s ease;
+}
+
+.style-switcher.open {
+    transform: translateX(-5px);
+}
+
+.style-switcher.open h4 {
+    visibility: visible;
+}
+
+.style-switcher .s-icon {
+    color: var(--main);
+    width: 50px;
+    height: 50px;
+    border: none;
+    cursor: pointer;
+    border-radius: 50%;
+    background-color: var(--white-alpha-25);
+    border: 1px solid var(--white-alpha-40);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 15px;
+    z-index: 1;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.style-switcher.open .s-icon {
+    margin: 0 -70px;
+}
+
+.style-switcher .s-icon i {
+    font-size: 25px;
+    line-height: 40px;
+}
+
+.style-switcher .s-icon:after {
+    border-radius: 50%;
+}
+
+.style-switcher .style-switcher-toggler {
+    top: 0;
+}
+
+.style-switcher h4 {
+    margin: 0 0 10px;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: capitalize;
+    margin-top: -83px;
+    visibility: hidden;
+}
+
+.style-switcher .colors {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.style-switcher .colors span {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    margin: 0 5px;
+}
+
+.style-switcher .color1 {
+    visibility: hidden;
+}
+
+.style-switcher.open .color1 {
+    background: teal;
+    visibility: visible;
+}
+
+.style-switcher.open .color2 {
+    background: rgb(147, 20, 220);
+    visibility: visible;
+}
+
+.style-switcher.open .color3 {
+    background: #e02f6b;
+    visibility: visible;
+}
+
+.style-switcher.open .color4 {
+    background: navy;
+    visibility: visible;
+}
+
+.style-switcher.open .color5 {
+    background: orangered;
+    visibility: visible;
 }
 
 /* Responsiveness */

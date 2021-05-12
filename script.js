@@ -95,3 +95,39 @@ function portfolioItemDetails(portfolioItem) {
     document.querySelector(".pp-body").innerHTML = 
     portfolioItem.querySelector(".portfolio-item-details").innerHTML;
 }
+
+// Toggle Style Switcher...
+const styleSwitcherToggler = document.querySelector(".style-switcher-toggler");
+
+styleSwitcherToggler.addEventListener("click", () => {
+    document.querySelector(".style-switcher").classList.toggle("open");
+});
+
+// Hide Style Switcher On Scroll...
+window.addEventListener("scroll", () => {
+    if (document.querySelector(".style-switcher").classList.contains("open")) {
+        document.querySelector(".style-switcher").classList.remove("open");
+    }
+});
+
+// Theme Colors...
+const alternateStyles = document.querySelectorAll(".alternate-style");
+function setActiveStyle(c) {
+    localStorage.setItem("color", c);
+    changeColor();
+}
+
+function changeColor() {
+    alternateStyles.forEach((style) => {
+        if (localStorage.getItem("color") === style.getAttribute("title")) {
+            style.removeAttribute("disabled");
+        } else {
+            style.setAttribute("disabled", "true");
+        }
+    });
+}
+
+// Checking if 'color' key exists...
+if (localStorage.getItem("color") !== null) {
+    changeColor();
+}
