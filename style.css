@@ -279,7 +279,7 @@ button {
     background-color: var(--blue);
     left: 5%;
     top: 10%;
-    /* opacity: 0.5; */
+    opacity: 0.5;
     animation: zoomInOut 8s linear infinite;
 }
 
@@ -289,7 +289,7 @@ button {
     background-color: var(--main);
     left: 30%;
     top: 50%;
-    /* opacity: 0.4; */
+    opacity: 0.4;
     animation: bounceTop 5s ease-in-out infinite;
 }
 
@@ -308,7 +308,7 @@ button {
     background-color: var(--orange);
     top: 80%;
     left: -30px;
-    /* opacity: 0.6; */
+    opacity: 0.6;
 }
 
 /* Overlay */
